@@ -9,7 +9,7 @@ function App() {
   const [newTaskTitle, setNewTaskTitle] = useState('')
 
   useEffect(() => {
-    axios.get('http://localhost:8080/api/tasks')
+    axios.get('https://accessitrack-backend.onrender.com/api/tasks')
       .then(response => {
         setTasks(response.data)
       })
@@ -19,7 +19,7 @@ function App() {
   }, [])
 
   function handleAddTask() {
-    axios.post('http://localhost:8080/api/tasks', {
+    axios.post('https://accessitrack-backend.onrender.com/api/tasks', {
       title: newTaskTitle,
       description: '',
       dueDate: '',
@@ -36,7 +36,7 @@ function App() {
   }
 
   function handleDeleteTask(id) {
-    axios.delete(`http://localhost:8080/api/tasks/${id}`)
+    axios.delete(`https://accessitrack-backend.onrender.com/api/tasks/${id}`)
       .then(() => {
         setTasks(tasks.filter(task => task.id !== id))
       })
@@ -46,7 +46,7 @@ function App() {
   }
 
   function handleToggleComplete(task) {
-    axios.put(`http://localhost:8080/api/tasks/${task.id}`, {
+    axios.put(`https://accessitrack-backend.onrender.com/api/tasks/${task.id}`, {
       ...task,
       completed: !task.completed
     })
