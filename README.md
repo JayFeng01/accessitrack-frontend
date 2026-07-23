@@ -69,3 +69,6 @@ The app will run on `http://localhost:5173`
 
 ### High-Contrast Mode
 ![Accessitrack in high-contrast mode with black background and yellow text](screenshots/high-contrast-mode.png)
+
+## Live Demo
+   [https://accessitrack-frontend.vercel.app](https://accessitrack-frontend.vercel.app)
